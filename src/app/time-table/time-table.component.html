@@ -1,0 +1,82 @@
+<div>
+
+  <div id="DateNTime">
+    
+
+    
+    <!--< link rel= "stylesheet" href="bower_components/dist/angular-clock.css">-->
+    <!--<mat-card id="date" class="dateTime"> {{todayDate}}</mat-card>-->
+    <!--<mat-card id="time" class="dateTime"> {{todayTime}}</mat-card>-->
+  <mat-card>
+      <!-- <app-digital-clock>    </app-digital-clock> -->
+<!--<ds-widget-clock theme="dark" show-secs="true" digital-format="'hh:mm:ss a'" ></ds-widget-clock>-->
+     
+    </mat-card>
+
+
+  </div> 
+
+
+  <!--datsource is the place where the information is obtainded-->
+  <table mat-table [dataSource] = "dataSource" class="mat-elevation-z8">
+    <!-- template has to be created for each and every coloumn-->
+
+    <!--creating the Hall coloum template-->
+    <ng-container matColumnDef="Hall">
+      <th mat-header-cell *matHeaderCellDef> Hall </th>
+      <td mat-cell *matCellDef="let element" class="hall"> {{element.hall}} </td>
+    </ng-container>
+
+    <!--creating the 8 to 9 timeslot coloum template-->
+    <ng-container matColumnDef="t8to9">
+      <th mat-header-cell *matHeaderCellDef> 8 A.M. - 9 A.M </th>
+      <td mat-cell *matCellDef="let element" class={{element.floor}}> {{element.t8to9}} </td>
+    </ng-container>
+
+    <!--creating the 9 to 10 timeslot coloum template-->
+    <ng-container matColumnDef="t9to10">
+      <th mat-header-cell *matHeaderCellDef> 9 A.M. - 10 A.M </th>
+      <td mat-cell *matCellDef="let element" class={{element.floor}}> {{element.t9to10}} </td>
+    </ng-container>
+
+    <!--creating the 10 to 11 timeslot coloum template-->
+    <ng-container matColumnDef="t10to11">
+      <th mat-header-cell *matHeaderCellDef> 10 A.M. - 11 A.M </th>
+      <td mat-cell *matCellDef="let element" class={{element.floor}}> {{element.t10to11}} </td>
+    </ng-container>
+
+    <!--creating the 11 to 12 timeslot coloum template-->
+    <ng-container matColumnDef="t11to12">
+      <th mat-header-cell *matHeaderCellDef> 11 A.M. - 12 noon </th>
+      <td mat-cell *matCellDef="let element" class={{element.floor}}> {{element.t11to12}} </td>
+    </ng-container>
+
+    <!--creating the 1 to 2 timeslot coloum template-->
+    <ng-container matColumnDef="t13to14">
+      <th mat-header-cell *matHeaderCellDef> 1 P.M. - 2 P.M. </th>
+      <td mat-cell *matCellDef="let element" class={{element.floor}}> {{element.t13to14}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="t14to15">
+      <th mat-header-cell *matHeaderCellDef> 2 P.M. - 3 P.M. </th>
+      <td mat-cell *matCellDef="let element" class={{element.floor}}> {{element.t14to15}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="t15to16">
+      <th mat-header-cell *matHeaderCellDef> 3 P.M. - 4 P.M. </th>
+      <td mat-cell *matCellDef="let element" class={{element.floor}}> {{element.t15to16}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="t16to17">
+      <th mat-header-cell *matHeaderCellDef> 4 P.M. - 5 P.M. </th>
+      <td mat-cell *matCellDef="let element" class={{element.floor}}> {{element.t16to17}} </td>
+    </ng-container>
+
+
+    <!-- finally adding the created templaes to the table-->
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+
+  </table>
+</div>

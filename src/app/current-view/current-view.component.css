@@ -1,0 +1,73 @@
+
+
+
+/******** table realted propertese **************/
+table{
+  width: 100%;
+  background-color: white;
+
+}
+/*** making the opacity in the main 3 coloums *****/
+.previous{
+  opacity: 0.4;
+  background-color: #e5ff29;
+}
+.current{
+  opacity: 1.0;
+  background-color: #e5ff29;
+}
+.next{
+  opacity: 0.7;
+  background-color: #e5ff29;
+}
+ /* time header settings */
+.timeSlot{
+
+  font-size: larger;
+  font-weight: bolder;
+  background-color: #9dffe9;
+  text-align: center;
+}
+ /* changing the colours for the difrent floors*/
+.f1{
+  background-color: #fffc1c;
+  border-bottom: double;
+  border-bottom-color: black;
+}
+.f2{
+  background-color: coral;
+  border-bottom: double;
+  border-bottom-color: black;
+}
+.f3{
+  background-color: #ffb7fe;
+  border-bottom: double;
+  border-bottom-color: black;
+
+}
+/*.mat-card{*/
+  /*border-bottom: double;*/
+  /*border-bottom-color: black;*/
+/*}*/
+
+/* changing the content of the lecture tile*/
+.code{
+  font-size: small;
+  font-weight: 400;
+  text-align: center;
+}
+.name{
+  font-size: large;
+  font-weight: 800;
+  text-align: center;
+}
+.time{
+  font-size: large;
+  font-weight: 600;
+  text-align: center;
+}
+.loc{
+  font-size: medium;
+  font-weight: 800;
+  text-align: center;
+}

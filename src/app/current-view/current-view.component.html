@@ -1,0 +1,61 @@
+<div>
+  <table  mat-table [dataSource] = "dataSource" class="mat-elevation-z8">
+    <!-- template has to be created for each and every coloumn-->
+
+    <!--creating the Hall coloum template-->
+    <ng-container  matColumnDef="previousSlot">
+      <th mat-header-cell *matHeaderCellDef class="timeSlot"> {{timeSlotPrevios}}  </th>
+      <td mat-cell *matCellDef="let element"  class="previous {{element.previousSlot.floor}}" >
+      <mat-card class="{{element.previousSlot.floor}}" >
+        <p class="name">{{element.previousSlot.name}} </p>
+        <p class="code"> {{element.previousSlot.code}}</p>
+        <p class="time"> {{element.previousSlot.startingTime}} - {{element.previousSlot.endingTime}}</p>
+        <p class="loc"> {{element.previousSlot.location}}</p>
+      </mat-card>
+      </td>
+
+    </ng-container>
+
+    <!--creating the 8 to 9 timeslot coloum template-->
+    <ng-container  matColumnDef="currentSlot">
+      <th mat-header-cell *matHeaderCellDef class="timeSlot"> {{timeslotCurrent}} </th>
+      <td mat-cell *matCellDef="let element" class="current {{element.currentSlot.floor}}" >
+        <mat-card class="{{element.previousSlot.floor}}">
+          <p class="name">{{element.currentSlot.name}} </p>
+          <p class="code"> {{element.currentSlot.code}}</p>
+          <p class="time"> {{element.currentSlot.startingTime}} - {{element.currentSlot.endingTime}}</p>
+          <p class="loc"> {{element.currentSlot.location}}</p>
+        </mat-card>
+
+      </td>
+      <br>
+    </ng-container>
+
+    <ng-container  matColumnDef="nextSlot">
+      <th mat-header-cell *matHeaderCellDef class="timeSlot"> {{timeSlotNext}} </th>
+      <td mat-cell *matCellDef="let element" class="next {{element.nextSlot.floor}}" >
+        <mat-card class="{{element.previousSlot.floor}}">
+          <p class="name">{{element.nextSlot.name}} </p>
+          <p class="code"> {{element.nextSlot.code}}</p>
+          <p class="time"> {{element.nextSlot.startingTime}} - {{element.nextSlot.endingTime}}</p>
+          <p class="loc"> {{element.nextSlot.location}}</p>
+        </mat-card>
+
+      </td>
+      <br>
+    </ng-container>
+
+
+
+
+
+
+    <!-- finally adding the created templaes to the table-->
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+
+  </table>
+</div>
+
+
