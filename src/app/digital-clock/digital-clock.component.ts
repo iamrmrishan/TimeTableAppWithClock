@@ -3,9 +3,7 @@ import { Component, OnInit, OnDestroy, Input } from '@angular/core';
 import { UtilService } from '../shared/services/util/util.service';
 import { DAYS_SHORT, CLASS_LIST } from '../shared/constants/calendar.constants';
 
-/**
- * @author: Shoukath Mohammed
- */
+
 @Component({
   selector: 'app-digital-clock',
   templateUrl: './digital-clock.component.html',
